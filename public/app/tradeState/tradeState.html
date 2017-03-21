@@ -1,0 +1,72 @@
+<div class="row">
+   <div class="col-md-12" ng-controller="tradeCtrl">
+      <h2>Trade Blotter UI</h2>
+      <table class="table table-striped table-hover">
+         <thead>
+            <tr>
+               <th>
+                  Group
+               </th>
+               <th>
+                  Txn Id
+               </th>
+               <th>
+                  Qunantity
+               </th>
+               <th>
+                  Price
+               </th>
+               <th>
+                  Mkt Value
+               </th>
+               <th>P/L</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td colspan="6"><h4>{{filteredData.BAC[0].Symbol}}</h4> </td>
+            </tr>
+   <tr ng-repeat="(key,value) in filteredData.BAC track by value.TxnId">
+  <td><em><strong>{{value.Action}}</strong></em></td>
+  <td>{{value.TxnId}}</td>
+  <td>{{value.Quantity}}</td>
+  <td>{{value.Price}}</td>
+  <td>{{value.MarketValue}}</td>
+  <td>{{value.PL}}</td>
+  </tr>
+
+            <tr>
+               <td colspan="6"><h4>{{filteredData.XOM[0].Symbol}}</h4> </td>
+            </tr>
+            <tr ng-repeat="(key,value) in filteredData.XOM track by value.TxnId">
+               <td><em>{{value.Action}}</em></td>
+               <td>{{value.TxnId}}</td>
+               <td>{{value.Quantity}}</td>
+               <td>{{value.Price}}</td>
+               <td>{{value.MarketValue}}</td>
+               <td>{{value.PL}}</td>
+
+            <tr>
+               <td colspan="6"><h4>{{filteredData.IBM[0].Symbol}}</h4> </td>
+            </tr>
+            <tr ng-repeat="(key,value) in filteredData.IBM track by value.TxnId">
+               <td><em>{{value.Action}}</em></td>
+               <td>{{value.TxnId}}</td>
+               <td>{{value.Quantity}}</td>
+               <td>{{value.Price}}</td>
+               <td>{{value.MarketValue}}</td>
+               <td>{{value.PL}}</td>
+            </tr>
+
+            <tr>
+            	<td class="bg-success"><strong>Total P/L</strong></td>
+            	<td class="bg-success"></td>
+            	<td class="bg-success"></td>
+            	<td class="bg-success"></td>
+            	<td class="bg-success"></td>
+            	<td class="bg-success"><strong>{{tradeList.pltotal}}</strong></td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

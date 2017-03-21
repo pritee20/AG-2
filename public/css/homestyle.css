@@ -1,0 +1,11 @@
+/* .tradeTable{ width: 100%; }
+.coltaxId-width { width: 23% ;}
+.colprice-width {width:20% ;}
+.colqty-width { width: 30% ; }
+
+ */
+ .tradeTable {width: 100%;}
+.coltaxId-width {width: 23%;}
+.colprice-width {width: 17%;}
+.colqty-width {width: 24%;}
+.colmax-witdh {width: 25%;}
