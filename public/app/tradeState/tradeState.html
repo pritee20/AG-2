@@ -17,55 +17,34 @@
                   Price
                </th>
                <th>
-                  Mkt Value
+                  <a href="#" ng-click="sortType = 'MarketValue'; sortReverse = !sortReverse">Mkt Value
+                            <span ng-show="sortType == 'MarketValue' && !sortReverse" class="fa fa-caret-down"></span>
+                            <span ng-show="sortType == 'MarketValue' && sortReverse" class="fa fa-caret-up"></span></a>
                </th>
                <th>P/L</th>
             </tr>
          </thead>
          <tbody>
-            <tr>
-               <td colspan="6"><h4>{{filteredData.BAC[0].Symbol}}</h4> </td>
-            </tr>
-   <tr ng-repeat="(key,value) in filteredData.BAC track by value.TxnId">
-  <td><em><strong>{{value.Action}}</strong></em></td>
-  <td>{{value.TxnId}}</td>
-  <td>{{value.Quantity}}</td>
-  <td>{{value.Price}}</td>
-  <td>{{value.MarketValue}}</td>
-  <td>{{value.PL}}</td>
-  </tr>
 
-            <tr>
-               <td colspan="6"><h4>{{filteredData.XOM[0].Symbol}}</h4> </td>
-            </tr>
-            <tr ng-repeat="(key,value) in filteredData.XOM track by value.TxnId">
-               <td><em>{{value.Action}}</em></td>
-               <td>{{value.TxnId}}</td>
-               <td>{{value.Quantity}}</td>
-               <td>{{value.Price}}</td>
-               <td>{{value.MarketValue}}</td>
-               <td>{{value.PL}}</td>
-
-            <tr>
-               <td colspan="6"><h4>{{filteredData.IBM[0].Symbol}}</h4> </td>
-            </tr>
-            <tr ng-repeat="(key,value) in filteredData.IBM track by value.TxnId">
-               <td><em>{{value.Action}}</em></td>
-               <td>{{value.TxnId}}</td>
-               <td>{{value.Quantity}}</td>
-               <td>{{value.Price}}</td>
-               <td>{{value.MarketValue}}</td>
-               <td>{{value.PL}}</td>
-            </tr>
-
-            <tr>
-            	<td class="bg-success"><strong>Total P/L</strong></td>
-            	<td class="bg-success"></td>
-            	<td class="bg-success"></td>
-            	<td class="bg-success"></td>
-            	<td class="bg-success"></td>
-            	<td class="bg-success"><strong>{{tradeList.pltotal}}</strong></td>
-            </tr>
+                <tr data-ng-repeat="(key, lists) in groups">
+                    <td colspan="6"> <strong>{{key}}</strong>
+                        <table class="table tableCalList">
+                            <tr data-ng-repeat="v in lists | orderBy:sortType:sortReverse">
+                                <td class="tradegroup">{{v.Action}}</td>
+                                <td class="coltaxId-width">{{v.TxnId}}</td>
+                                <td class="colqty-width">{{v.Quantity}}</td>
+                                <td class="colprice-width">{{v.Price}}</td>
+                                <td class="colmktval-width">{{v.MarketValue}}</td>
+                                <td>{{v.PL}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr> 
+              <tr>
+              <td class="bg-success"><strong>Total P/L</strong></td>
+              <td class="bg-success" colspan="4"></td>
+              <td class="bg-success"><strong>{{tradeList.pltotal}}</strong></td>
+            </tr>                       
          </tbody>
       </table>
    </div>

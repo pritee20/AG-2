@@ -4,7 +4,10 @@
         function(tradeDataCalService, $scope) {
             tradeDataCalService.getAllData().then(function(respdata){
                 $scope.tradeList = respdata.data;
-                $scope.filteredData = _.groupBy($scope.tradeList.trades, 'Symbol');
+                $scope.groups = _.groupBy($scope.tradeList.trades, "Symbol");
+                $scope.sortType = 'MarketValue';
+                $scope.sortReverse = false;
+
             });            
 
         }

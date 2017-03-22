@@ -1,11 +1,14 @@
-/* .tradeTable{ width: 100%; }
-.coltaxId-width { width: 23% ;}
-.colprice-width {width:20% ;}
-.colqty-width { width: 30% ; }
-
- */
- .tradeTable {width: 100%;}
-.coltaxId-width {width: 23%;}
-.colprice-width {width: 17%;}
+.colmktvalhead-width {width: 13%;}
+.tradegroup {width: 17%;}
+.coltaxId-width {width: 18%;}
 .colqty-width {width: 24%;}
-.colmax-witdh {width: 25%;}
+.colprice-width {width: 15%;}
+.colmax-width {width: 25%;}
+.colmktval-width {width: 10%;}
+
+.tradeStateGrp{width: 20%;}
+.tradeStateTxnID{width: 15%;}
+.tradeStateQty{width: 20%;}
+.tradeStatePrice{width: 13%;}
+.tradeStatemktVal{width: 23%}
+.tradeStatePl{}

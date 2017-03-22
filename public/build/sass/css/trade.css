@@ -1,0 +1,31 @@
+.tableList {
+  width: 100%; }
+  .tableList .colmktvalhead-width {
+    width: 13%; }
+  .tableList .tradegroup {
+    width: 17%; }
+  .tableList .coltaxId-width {
+    width: 18%; }
+  .tableList .colqty-width {
+    width: 24%; }
+  .tableList .colprice-width {
+    width: 15%; }
+  .tableList .colmax-width {
+    width: 25%; }
+  .tableList .colmktval-width {
+    width: 10%; }
+
+.tableCalList {
+  width: 100%; }
+  .tableCalList .tradegroup {
+    width: 20%; }
+  .tableCalList .coltaxId-width {
+    width: 15%; }
+  .tableCalList .colqty-width {
+    width: 20%; }
+  .tableCalList .colprice-width {
+    width: 13%; }
+  .tableCalList .colmktval-width {
+    width: 23%; }
+
+/*# sourceMappingURL=../maps/css/trade.css.map */
